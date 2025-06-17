@@ -6,6 +6,8 @@ export const successMessage = (projectName, options) => {
     const cdCommand = isCurrentDir ? '' : `\n${chalk.cyan('→')} Change directory: ${chalk.bold(`cd ${projectName}`)}`;
     const installCommand = options.install ? '' : `\n${chalk.cyan('→')} Install dependencies: ${chalk.bold('pnpm install')}`;
     const devCommand = `\n${chalk.cyan('→')} Start development: ${chalk.bold('pnpm dev')}`;
+    const configCommand = `\n${chalk.cyan('→')} Configure environment: ${chalk.bold('pnpm config')}`;
+    const helpCommand = `\n${chalk.cyan('→')} View all commands: ${chalk.bold('pnpm help')}`;
     const urls = `\n${chalk.cyan('→')} Application URLs:
      Frontend: ${chalk.underline('http://localhost:3000')}
      Backend:  ${chalk.underline('http://localhost:8000')}`;
@@ -17,6 +19,8 @@ ${chalk.cyan('Project location:')} ${projectDisplay}
 ${cdCommand}
 ${installCommand}
 ${devCommand}
+${configCommand}
+${helpCommand}
 ${urls}
 ${chalk.gray('——————————————————————————————————————————')}
 ${chalk.blue('Next steps:')}

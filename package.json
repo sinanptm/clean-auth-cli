@@ -1,10 +1,10 @@
 {
-  "name": "fullstack-cli",
+  "name": "fullstack-cli-template-project",
   "version": "1.0.0",
   "description": "Professional CLI for Fullstack Template Management",
   "type": "module",
   "bin": {
-    "fullstack-cli": "./bin/cli.js"
+    "fullstack-cli-template-project": "bin/cli.js"
   },
   "keywords": [],
   "author": "",
