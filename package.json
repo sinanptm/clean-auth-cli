@@ -1,10 +1,10 @@
 {
-  "name": "clean-auth",
+  "name": "f-auth-cli",
   "version": "1.0.1",
   "description": "Professional CLI for Fullstack Template Management",
   "type": "module",
   "bin": {
-    "clean-auth": "bin/cli.js"
+    "f-auth-cli": "bin/cli.js"
   },
   "keywords": [],
   "author": "",
