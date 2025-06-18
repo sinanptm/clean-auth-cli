@@ -1,5 +1,6 @@
+import chalk from 'chalk';
 
-const successMessage = (projectName, options) => {
+const successMessage = (options) => {
     const installCommand = options.install ? '' : `\n${chalk.cyan('→')} Install dependencies: ${chalk.bold('pnpm install')}`;
     const devCommand = `\n${chalk.cyan('→')} Start development: ${chalk.bold('pnpm dev')}`;
     const configCommand = `\n${chalk.cyan('→')} Configure environment: ${chalk.bold('pnpm auth-config')}`;
