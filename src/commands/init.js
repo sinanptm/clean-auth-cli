@@ -2,7 +2,6 @@ import {execa} from 'execa';
 import fs from 'fs-extra';
 import chalk from 'chalk';
 import ora from 'ora';
-import {successMessage} from '../utils/ui.js';
 
 export default async (projectName, options) => {
     const spinner = ora('Initializing project...').start();
@@ -56,3 +55,31 @@ export default async (projectName, options) => {
 
     spinner.stop();
 };
+
+const successMessage = (projectName, options) => {
+    const isCurrentDir = projectName === '.';
+
+    const installCommand = options.install ? '' : `\n${chalk.cyan('→')} Install dependencies: ${chalk.bold('pnpm install')}`;
+    const devCommand = `\n${chalk.cyan('→')} Start development: ${chalk.bold('pnpm dev')}`;
+    const configCommand = `\n${chalk.cyan('→')} Configure environment: ${chalk.bold('pnpm auth-config')}`;
+    const helpCommand = `\n${chalk.cyan('→')} View all commands: ${chalk.bold('pnpm auth-help')}`;
+    const urls = `\n${chalk.cyan('→')} Application URLs:
+     Frontend: ${chalk.underline('http://localhost:3000')}
+     Backend:  ${chalk.underline('http://localhost:8000')}`;
+
+    console.log(`
+${chalk.green.bold('✔ Project successfully initialized!')}
+${chalk.gray('——————————————————————————————————————————')}
+${installCommand}
+${devCommand}
+${configCommand}
+${helpCommand}
+${urls}
+${chalk.gray('——————————————————————————————————————————')}
+${chalk.blue('Next steps:')}
+${chalk.cyan('→')} Configure environment variables in ${chalk.bold('.env')} files
+${chalk.cyan('→')} Customize the template to fit your needs
+
+${chalk.yellow.bold('Happy coding! 🚀')}
+`);
+}

@@ -2,7 +2,7 @@ import {program} from 'commander';
 import initCommand from './commands/init.js';
 
 program
-    .name('fullstack-cli')
+    .name('clean-auth')
     .description('Professional CLI for Fullstack Template Management')
     .version('1.0.0');
 
