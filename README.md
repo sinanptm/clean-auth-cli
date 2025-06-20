@@ -120,4 +120,4 @@ This starts:
 
 ## License
 
-MIT © [Sinan](https://github.com/sinanptm)
+MIT © [sinanptm](https://github.com/sinanptm)
