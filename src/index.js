@@ -14,6 +14,7 @@ program.command('init <project-name>')
 
 program.command('auth-config')
     .description('Configure environment files for server and client')
+    .option('-s, --skip', 'Skip the prompts and use default values')
     .action(authConfigCommand);
 
 program.parse(process.argv);

@@ -102,7 +102,7 @@ const createEnvFiles = async (answers) => {
     return results;
 }
 
-const authConfigCommand = async () => {
+const authConfigCommand = async (options) => {
     console.log(chalk.blue.bold('\n🔐 Auth Configuration Setup\n'));
 
     try {
@@ -128,8 +128,18 @@ const authConfigCommand = async () => {
             return;
         }
 
-        // Get user input
-        const answers = await promptUser();
+        let answers;
+
+        if (options.skip) {
+            console.log(chalk.blue('\nUsing default values for environment variables...'));
+            answers = {
+                port: ENV_CONFIG.defaultPort,
+                adminEmail: ENV_CONFIG.defaultAdminEmail,
+                adminPassword: ENV_CONFIG.defaultAdminPassword,
+            };
+        } else {
+            answers = await promptUser();
+        }
 
         // Create environment files
         const spinner = ora('Creating environment files...').start();

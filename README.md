@@ -41,28 +41,11 @@ clean-auth init my-auth-project --install
 ### Configure environment variables
 
 ```bash
-clean-auth auth-config
+clean-auth auth-config [options]
 ```
 
-Interactive setup for:
-- Database connection (MongoDB)
-- JWT secrets and token configuration
-- Email service (SMTP) for OTP delivery
-- Firebase OAuth configuration
-- Admin credentials
-- CORS and security settings
-
-## What's Included
-
-The generated project includes:
-- Clean architecture implementation
-- JWT-based authentication
-- Email OTP verification
-- Firebase OAuth integration
-- Admin panel
-- MongoDB integration
-- Next.js frontend
-- Express.js backend
+Options:
+- `-s, --skip` - Skip the prompts and use default values for environment configuration.
 
 ## Development
 
@@ -71,7 +54,7 @@ After project creation:
 ```bash
 cd my-auth-project
 
-# Configure environment
+# Configure environment variables with prompts
 clean-auth auth-config
 
 # Start development servers
@@ -87,7 +70,6 @@ This starts:
 - Node.js 18+
 - MongoDB (local or Atlas)
 - Firebase project with Authentication enabled
-
 
 
 ## License
