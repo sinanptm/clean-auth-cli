@@ -25,33 +25,83 @@ Or use with npx:
 npx clean-auth init my-project
 ```
 
-## Usage
+## Commands
 
-### Create a new project
+### `init` - Initialize Project
+
+Create a new full-stack authentication project with clean architecture.
 
 ```bash
 clean-auth init <project-name> [options]
 ```
 
-Options:
-- `-i, --install` - Automatically install dependencies
+**Options:**
+- `-i, --install` - Automatically install dependencies after project creation
+- `-h, --help` - Show help for this command
 
+**Examples:**
 ```bash
-# Basic project creation
 clean-auth init my-auth-project
-
-# Create and install dependencies
 clean-auth init my-auth-project --install
 ```
 
-### Configure environment variables
+### `auth-config` - Configure Authentication
+
+Set up environment variables and authentication configuration.
 
 ```bash
 clean-auth auth-config [options]
 ```
 
-Options:
-- `-s, --skip` - Skip the prompts and use default values for environment configuration.
+**Options:**
+- `-s, --skip` - Skip interactive prompts and use default values
+- `-h, --help` - Show help for this command
+
+**Examples:**
+```bash
+clean-auth auth-config
+clean-auth auth-config --skip
+```
+
+### `clean` - Clean Project Structure
+
+Remove unnecessary parts of your project structure to customize it for your needs.
+
+```bash
+clean-auth clean [options]
+```
+
+**Options:**
+- `-s, --server` - Remove entire server directory and update root configurations
+- `-w, --web` - Remove entire web directory and update root configurations  
+- `-o, --opensource` - Remove open source files (LICENSE, CONTRIBUTING.md, README.md)
+- `-h, --help` - Show help for this command
+
+**Examples:**
+```bash
+clean-auth clean --server
+clean-auth clean --web --opensource
+```
+
+### `help` - Show All Commands
+
+Display a list of all available commands.
+
+```bash
+clean-auth help
+```
+
+### Global Options
+
+**Options:**
+- `-h, --help` - Show general help or help for specific commands
+
+**Examples:**
+```bash
+clean-auth --help
+clean-auth init --help
+clean-auth --version
+```
 
 ## Development
 
@@ -76,7 +126,6 @@ This starts:
 - Node.js 18+
 - MongoDB (local or Atlas)
 - Firebase project with Authentication enabled
-
 
 ## License
 
