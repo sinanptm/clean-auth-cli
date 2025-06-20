@@ -1,6 +1,6 @@
 {
   "name": "clean-auth",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Full stack clean auth template manager",
   "type": "module",
   "bin": {
