@@ -1,4 +1,4 @@
-# Clean Auth CLI
+# Full Stack Clean Auth CLI
 
 CLI tool for scaffolding full-stack authentication projects with clean architecture.
 
@@ -6,7 +6,6 @@ CLI tool for scaffolding full-stack authentication projects with clean architect
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 
-# Full Stack Clean Auth Template
 
 ## Documentation
 https://full-stack-clean-auth-template.vercel.app/
