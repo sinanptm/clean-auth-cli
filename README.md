@@ -6,6 +6,8 @@ CLI tool for scaffolding full-stack authentication projects with clean architect
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 
+**Template Links:** [Documentation](https://full-stack-clean-auth-template.vercel.app/) • [GitHub](https://github.com/sinanptm/fullstack-clean-auth-template)
+
 ## Installation
 
 ```bash
@@ -86,11 +88,8 @@ This starts:
 - MongoDB (local or Atlas)
 - Firebase project with Authentication enabled
 
-## Documentation
 
-- [Full Documentation](https://full-stack-clean-auth-template.vercel.app/)
-- [GitHub Repository](https://github.com/sinanptm/fullstack-clean-auth-template)
 
 ## License
 
-MIT © [Sinan PTM](https://github.com/sinanptm)
+MIT © [Sinan](https://github.com/sinanptm)
