@@ -37,7 +37,6 @@ clean-auth init <project-name> [options]
 
 **Options:**
 - `-i, --install` - Automatically install dependencies after project creation
-- `-h, --help` - Show help for this command
 
 **Examples:**
 ```bash
@@ -55,7 +54,6 @@ clean-auth auth-config [options]
 
 **Options:**
 - `-s, --skip` - Skip interactive prompts and use default values
-- `-h, --help` - Show help for this command
 
 **Examples:**
 ```bash
@@ -75,7 +73,6 @@ clean-auth clean [options]
 - `-s, --server` - Remove entire server directory and update root configurations
 - `-w, --web` - Remove entire web directory and update root configurations  
 - `-o, --opensource` - Remove open source files (LICENSE, CONTRIBUTING.md, README.md)
-- `-h, --help` - Show help for this command
 
 **Examples:**
 ```bash
@@ -90,11 +87,6 @@ Display a list of all available commands.
 ```bash
 clean-auth help
 ```
-
-### Global Options
-
-**Options:**
-- `-h, --help` - Show general help or help for specific commands
 
 **Examples:**
 ```bash

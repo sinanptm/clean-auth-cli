@@ -38,10 +38,6 @@ const helpCommand = () => {
 
     console.log(chalk.gray('——————————————————————————————————————————————————————————————————————————————'));
 
-    console.log(chalk.yellow.bold('GLOBAL OPTIONS:'));
-    console.log(chalk.cyan('  -h, --help       Show help information'));
-    console.log('');
-
     console.log(chalk.yellow.bold('EXAMPLES:'));
     console.log(chalk.white('  clean-auth init my-project --install'));
     console.log(chalk.white('  clean-auth auth-config'));
