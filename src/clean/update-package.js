@@ -21,39 +21,33 @@ const updateRootPackageJson = async (removedDirs) => {
             }
 
             // Update scripts that reference removed directories
-            if (packageJson.scripts) {
+            if (packageJson.scripts && packageJson.scripts.dev) {
+                let devScript = packageJson.scripts.dev;
+
+            // Handle server removal
                 if (removedDirs.includes('server')) {
                     delete packageJson.scripts.test;
-                    if (packageJson.scripts.dev) {
-                        packageJson.scripts.dev = packageJson.scripts.dev.replace(
-                            /\"pnpm --prefix server dev\"\s*\"?/g, ''
-                        ).replace(/concurrently\s+/, '').replace(/\s+\"pnpm --prefix web dev\"/, 'pnpm --prefix web dev');
-
-                        if (packageJson.scripts.dev.includes('concurrently')) {
-                            packageJson.scripts.dev = packageJson.scripts.dev.replace(/concurrently\s+\"/, '');
-                            packageJson.scripts.dev = packageJson.scripts.dev.replace(/\"$/, '');
-                        }
-                    }
+                    devScript = devScript.replace(/\"pnpm --prefix server dev\"/g, '');
                 }
 
+                // Handle web removal
                 if (removedDirs.includes('web')) {
-                    if (packageJson.scripts.dev) {
-                        packageJson.scripts.dev = packageJson.scripts.dev.replace(
-                            /\"pnpm --prefix web dev\"\s*\"?/g, ''
-                        ).replace(/concurrently\s+/, '').replace(/\s+\"pnpm --prefix server dev\"/, 'pnpm --prefix server dev');
-
-                        if (packageJson.scripts.dev.includes('concurrently')) {
-                            packageJson.scripts.dev = packageJson.scripts.dev.replace(/concurrently\s+\"/, '');
-                            packageJson.scripts.dev = packageJson.scripts.dev.replace(/\"$/, '');
-                        }
-                    }
+                    devScript = devScript.replace(/\"pnpm --prefix web dev\"/g, '');
                 }
 
-                // Clean up empty or invalid dev script
-                if (packageJson.scripts.dev &&
-                    (packageJson.scripts.dev.trim() === '' ||
-                        packageJson.scripts.dev.trim() === 'concurrently' ||
-                        packageJson.scripts.dev.includes('concurrently ""'))) {
+                // Clean up the script
+                devScript = devScript.replace(/concurrently\s+/g, '');
+                devScript = devScript.replace(/\s+/g, ' ');
+                devScript = devScript.replace(/^\s+|\s+$/g, '');
+                devScript = devScript.replace(/^\"/, '').replace(/\"$/, ''); // remove outer quotes
+
+                if (!devScript.includes('" "')) {
+                    devScript = devScript.replace(/^concurrently\s*\"?/, '').replace(/\"?$/, '');
+                }
+
+                if (devScript && devScript.trim() !== '' && devScript !== 'concurrently') {
+                    packageJson.scripts.dev = devScript;
+                } else {
                     delete packageJson.scripts.dev;
                 }
             }
