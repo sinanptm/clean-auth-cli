@@ -7,7 +7,7 @@ import helpCommand from './help/help.js';
 program
     .name('clean-auth')
     .description('Professional CLI for Fullstack Template Management')
-    .version('1.0.5');
+    .version('1.0.7');
 
 program.command("help")
     .description('Show help for all commands')
