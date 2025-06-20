@@ -1,7 +1,7 @@
 {
   "name": "clean-auth",
   "version": "1.0.3",
-  "description": "Professional CLI for Fullstack Template Management",
+  "description": "Full stack clean auth template manager",
   "type": "module",
   "bin": {
     "clean-auth": "bin/cli.js"
