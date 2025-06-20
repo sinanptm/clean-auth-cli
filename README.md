@@ -100,7 +100,6 @@ clean-auth help
 ```bash
 clean-auth --help
 clean-auth init --help
-clean-auth --version
 ```
 
 ## Development

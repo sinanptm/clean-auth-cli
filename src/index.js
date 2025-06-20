@@ -2,11 +2,16 @@ import {program} from 'commander';
 import initCommand from './init/index.js';
 import authConfigCommand from './auth-config/index.js';
 import cleanCommand from './clean/index.js';
+import helpCommand from './help/help.js';
 
 program
     .name('clean-auth')
     .description('Professional CLI for Fullstack Template Management')
     .version('1.0.0');
+
+program.command("help")
+    .description('Show help for all commands')
+    .action(helpCommand);
 
 program.command('init <project-name>')
     .alias('i')
