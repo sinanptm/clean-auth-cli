@@ -46,7 +46,7 @@ const initCommand = async (projectName, options) => {
             spinner.succeed('Dependencies installed');
         }
 
-        successMessage(options);
+        successMessage(options, projectName);
 
     } catch (error) {
         spinner.fail('Project initialization failed');
