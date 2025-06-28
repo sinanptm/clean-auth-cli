@@ -27,14 +27,14 @@ const initCommand = async (projectName, options) => {
         if (!isCurrentDir) {
             await execa('git', [
                 'clone',
-                'https://github.com/sinanptm/fullstack-clean-auth-template.git',
+                'https://github.com/sinanptm/clean-auth-template.git',
                 targetDir
             ]);
             process.chdir(targetDir);
         } else {
             await execa('git', [
                 'clone',
-                'https://github.com/sinanptm/fullstack-clean-auth-template.git',
+                'https://github.com/sinanptm/clean-auth-template.git',
                 '.'
             ]);
         }

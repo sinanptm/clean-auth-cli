@@ -7,10 +7,10 @@ CLI tool for scaffolding full-stack authentication projects with clean architect
 [![Downloads](https://img.shields.io/npm/dm/clean-auth.svg)](https://www.npmjs.com/package/clean-auth)
 
 ### Documentation
-https://full-stack-clean-auth-template.vercel.app/
+https://clean-auth-template.vercel.app
 
 ### GitHub
-https://github.com/sinanptm/fullstack-clean-auth-template
+https://github.com/sinanptm/clean-auth-template
 
 ---
 

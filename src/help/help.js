@@ -3,8 +3,8 @@ import chalk from 'chalk';
 const helpCommand = () => {
     console.log(chalk.cyan.bold('\n🚀 Full Stack Clean Auth CLI\n'));
 
-    console.log(chalk.yellow.bold('Documentation: ') + chalk.white('https://full-stack-clean-auth-template.vercel.app/'));
-    console.log(chalk.yellow.bold('GitHub: ') + chalk.white('https://github.com/sinanptm/fullstack-clean-auth-template\n'));
+    console.log(chalk.yellow.bold('Documentation: ') + chalk.white('https://clean-auth-template.vercel.app'));
+    console.log(chalk.yellow.bold('GitHub: ') + chalk.white('https://github.com/sinanptm/clean-auth-template\n'));
 
     console.log(chalk.yellow.bold('USAGE:'));
     console.log(chalk.white('  clean-auth <command> [options]\n'));
