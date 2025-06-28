@@ -1,14 +1,40 @@
 {
   "name": "clean-auth",
   "version": "1.0.8",
-  "description": "Full stack clean auth template manager",
+  "description": "A modern full-stack authentication project CLI built with clean architecture, TypeScript, Firebase, and MongoDB. Instantly scaffold scalable auth systems with role-based access and OAuth support.",
   "type": "module",
   "bin": {
     "clean-auth": "bin/cli.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "authentication",
+    "auth",
+    "fullstack",
+    "clean architecture",
+    "cli",
+    "typescript",
+    "jwt",
+    "oauth",
+    "nextjs",
+    "express",
+    "mongodb",
+    "setup",
+    "starter-kit"
+  ],
+  "author": {
+    "email": "muhammedsinan0549@gmail.com",
+    "name": "Muhammed sinan",
+    "url": "https://www.muhammedsinan.space"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinanptm/clean-auth-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sinanptm/clean-auth-template/issues"
+  },
+  "homepage": "https://clean-auth-template.vercel.app",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "chalk": "^5.3.0",
