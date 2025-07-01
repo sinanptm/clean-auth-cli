@@ -1,4 +1,4 @@
-# Full Stack Clean Auth CLI
+# Clean Auth CLI
 
 CLI tool for scaffolding full-stack authentication projects with clean architecture.
 
