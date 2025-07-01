@@ -1,6 +1,6 @@
 {
   "name": "clean-auth",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A modern full-stack authentication project CLI built with clean architecture, TypeScript, Firebase, and MongoDB. Instantly scaffold scalable auth systems with role-based access and OAuth support.",
   "type": "module",
   "bin": {
