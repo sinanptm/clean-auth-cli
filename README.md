@@ -90,8 +90,7 @@ clean-auth help
 
 **Examples:**
 ```bash
-clean-auth --help
-clean-auth init --help
+clean-auth help
 ```
 
 ## Development
