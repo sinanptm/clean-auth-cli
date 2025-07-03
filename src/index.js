@@ -1,6 +1,6 @@
 import {program} from 'commander';
 import initCommand from './init/index.js';
-import authConfigCommand from './auth-config/index.js';
+import authConfigCommand from './config/index.js';
 import cleanCommand from './clean/index.js';
 import helpCommand from './help/help.js';
 
@@ -19,7 +19,7 @@ program.command('init <project-name>')
     .option('-i, --install', 'Install dependencies')
     .action(initCommand);
 
-program.command('auth-config')
+program.command('config')
     .description('Configure environment files for server and client')
     .option('-s, --skip', 'Skip the prompts and use default values')
     .action(authConfigCommand);
