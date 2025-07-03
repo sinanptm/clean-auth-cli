@@ -19,7 +19,7 @@ const helpCommand = () => {
     console.log(chalk.cyan('      -i, --install    Automatically install dependencies'));
 
     // Auth-config command
-    console.log(chalk.green.bold('  auth-config'));
+    console.log(chalk.green.bold('  config'));
     console.log(chalk.gray('    Configure environment variables and authentication settings'));
     console.log(chalk.cyan('    Options:'));
     console.log(chalk.cyan('      -s, --skip       Skip prompts and use default values'));
@@ -40,7 +40,7 @@ const helpCommand = () => {
 
     console.log(chalk.yellow.bold('EXAMPLES:'));
     console.log(chalk.white('  clean-auth init my-project --install'));
-    console.log(chalk.white('  clean-auth auth-config'));
+    console.log(chalk.white('  clean-auth config'));
     console.log(chalk.white('  clean-auth clean --server --opensource'));
     console.log(chalk.white('  clean-auth help'));
     console.log('');

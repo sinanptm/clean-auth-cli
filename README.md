@@ -44,12 +44,12 @@ clean-auth init my-auth-project
 clean-auth init my-auth-project --install
 ```
 
-### `auth-config` - Configure Authentication
+### `config` - Configure Authentication
 
 Set up environment variables and authentication configuration.
 
 ```bash
-clean-auth auth-config [options]
+clean-auth config [options]
 ```
 
 **Options:**
@@ -57,8 +57,8 @@ clean-auth auth-config [options]
 
 **Examples:**
 ```bash
-clean-auth auth-config
-clean-auth auth-config --skip
+clean-auth config
+clean-auth config --skip
 ```
 
 ### `clean` - Clean Project Structure
@@ -102,7 +102,7 @@ After project creation:
 cd my-auth-project
 
 # Configure environment variables with prompts
-clean-auth auth-config
+clean-auth config
 
 # Start development servers
 pnpm dev

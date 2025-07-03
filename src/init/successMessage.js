@@ -7,8 +7,8 @@ const successMessage = (options, projectName) => {
 
     const installCommand = options.install ? '' : `\n${chalk.cyan('→')} Install dependencies: ${chalk.bold('pnpm install')}`;
     const devCommand = `\n${chalk.cyan('→')} Start development: ${chalk.bold('pnpm dev')}`;
-    const configCommand = `\n${chalk.cyan('→')} Configure environment: ${chalk.bold('pnpm auth-config')}`;
-    const helpCommand = `\n${chalk.cyan('→')} View all commands: ${chalk.bold('pnpm help')}`;
+    const configCommand = `\n${chalk.cyan('→')} Configure environment: ${chalk.bold('clean-auth config')}`;
+    const helpCommand = `\n${chalk.cyan('→')} View all commands: ${chalk.bold('clean-auth help')}`;
     const urls = `\n${chalk.cyan('→')} Application URLs:
      Frontend: ${chalk.underline('http://localhost:3000')}
      Backend:  ${chalk.underline('http://localhost:8000')}`;
